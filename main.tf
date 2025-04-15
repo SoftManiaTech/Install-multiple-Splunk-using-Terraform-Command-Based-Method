@@ -66,8 +66,3 @@ resource "aws_instance" "splunk_server" {
     Name = "Splunk-Server-${count.index + 1}"
   }
 }
-
-# ✅ Output All Public IPs
-output "public_ips" {
-  value = aws_instance.splunk_server[*].public_ip
-}
